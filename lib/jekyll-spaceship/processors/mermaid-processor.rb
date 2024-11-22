@@ -18,7 +18,8 @@ module Jekyll::Spaceship
           'class' => 'mermaid'
         },
         'config': {
-          'theme' => 'default'
+          'theme' => 'default',
+          'bgColor' => 'transparent',
         },
         'src' => 'https://mermaid.ink/svg/'
       }
@@ -92,6 +93,7 @@ module Jekyll::Spaceship
 
       # set default method
       src += '{code}' if src.match(/\{.*\}/).nil?
+      src += '?bgColor=' + config['config']['bgColor']
 
       # encode to base64 string
       if src.include?('{code}')

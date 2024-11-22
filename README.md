@@ -213,6 +213,7 @@ jekyll-spaceship:
       custom: ['@startmermaid', '@endmermaid']
     config:
       theme: default
+      bgColor: transparent
     src: https://mermaid.ink/svg/
   media-processor:
     default:
